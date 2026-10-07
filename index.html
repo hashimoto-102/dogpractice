@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <title>狗狗說話機</title>
+  <style>
+    body { font-family: sans-serif; text-align: center; padding: 60px; background: #fdf6e3; }
+    #dog { font-size: 96px; cursor: pointer; }
+    #say { font-size: 24px; margin-top: 20px; }
+  </style>
+</head>
+<body>
+  <div id="dog">🐶</div>
+  <div id="say">點我一下！</div>
+  <script>
+    const lines = ["汪！", "要出去散步嗎？", "我餓了 🍖", "你今天 push 了嗎？", "摸摸頭 ❤️"];
+    document.getElementById("dog").onclick = () => {
+      document.getElementById("say").textContent = lines[Math.floor(Math.random() * lines.length)];
+    };
+  </script>
+</body>
+</html>
